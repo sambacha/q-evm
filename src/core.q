@@ -1,4 +1,3 @@
-\d .q
 /each: +-*%&|^<>=$ <= >= <> @ ? in within bin div abs log exp sqrt sin cos tan  f' f\: f/:
 neg:-:;not:~:;null:^:;string:$:;reciprocal:%:;floor:_:;ceiling:-_-:;signum:{(x>0)-x<0}
 mod:{x-y*x div y};xbar:{x*y div x:$[16h=abs[@x];"j"$x;x]};xlog:{log[y]%log x};and:&;or:|;each:{x'y};scan:{x\y};over:{x/y};prior:{x':y}
