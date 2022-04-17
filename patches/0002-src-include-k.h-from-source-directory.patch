@@ -1,0 +1,136 @@
+From 27755b440af53f2b77d63b765854f7b3865c146c Mon Sep 17 00:00:00 2001
+From: Sam Bacha <sam@manifoldfinance.com>
+Date: Sun, 6 Jun 2021 12:40:09 +0200
+Subject: [PATCH 2/2] src: include k.h from source directory
+
+---
+ src/KdbTypes.h        | 2 +-
+ src/MapValues.h       | 2 +-
+ src/MessageFormat.cpp | 2 +-
+ src/MessageFormat.h   | 2 +-
+ src/MessageParser.h   | 2 +-
+ src/ProtobufKdb.cpp   | 2 +-
+ src/ProtobufKdb.h     | 2 +-
+ src/RepeatedValues.h  | 2 +-
+ src/ScalarValues.h    | 2 +-
+ 9 files changed, 9 insertions(+), 9 deletions(-)
+
+diff --git a/src/KdbTypes.h b/src/KdbTypes.h
+index 80865d3..3d720be 100644
+--- a/src/KdbTypes.h
++++ b/src/KdbTypes.h
+@@ -6,7 +6,7 @@
+
+ // Due to its excessive and non-specific use of #define, 'k.h' must be included
+ // after all the protobuf headers to avoid conflicts.
+-#include <k.h>
++#include "k.h"
+
+
+ namespace kx {
+diff --git a/src/MapValues.h b/src/MapValues.h
+index d12c6bb..69788d7 100644
+--- a/src/MapValues.h
++++ b/src/MapValues.h
+@@ -5,7 +5,7 @@
+
+ // Due to its excessive and non-specific use of #define, 'k.h' must be included
+ // after all the protobuf headers to avoid conflicts.
+-#include <k.h>
++#include "k.h"
+
+
+ namespace kx {
+diff --git a/src/MessageFormat.cpp b/src/MessageFormat.cpp
+index 0a38ff3..d43acc0 100644
+--- a/src/MessageFormat.cpp
++++ b/src/MessageFormat.cpp
+@@ -6,7 +6,7 @@
+
+ // Due to its excessive and non-specific use of #define, 'k.h' must be included
+ // after all the protobuf headers to avoid conflicts.
+-#include <k.h>
++#include "k.h"
+
+
+ namespace kx {
+diff --git a/src/MessageFormat.h b/src/MessageFormat.h
+index f38bcd2..a2cfef5 100644
+--- a/src/MessageFormat.h
++++ b/src/MessageFormat.h
+@@ -6,7 +6,7 @@
+
+ // Due to its excessive and non-specific use of #define, 'k.h' must be included
+ // after all the protobuf headers to avoid conflicts.
+-#include <k.h>
++#include "k.h"
+
+
+ namespace kx {
+diff --git a/src/MessageParser.h b/src/MessageParser.h
+index 02d143a..f0fefb0 100644
+--- a/src/MessageParser.h
++++ b/src/MessageParser.h
+@@ -9,7 +9,7 @@
+
+ // Due to its excessive and non-specific use of #define, 'k.h' must be included
+ // after all the protobuf headers to avoid conflicts.
+-#include <k.h>
++#include "k.h"
+
+
+ namespace kx {
+diff --git a/src/ProtobufKdb.cpp b/src/ProtobufKdb.cpp
+index 8d6fdd2..4f484a1 100644
+--- a/src/ProtobufKdb.cpp
++++ b/src/ProtobufKdb.cpp
+@@ -25,7 +25,7 @@
+ // #define R return
+ //
+ // in 'k.h'.
+-#include <k.h>
++#include "k.h"
+
+
+ inline bool IsKdbString(K str)
+diff --git a/src/ProtobufKdb.h b/src/ProtobufKdb.h
+index a3777c7..8348a4d 100644
+--- a/src/ProtobufKdb.h
++++ b/src/ProtobufKdb.h
+@@ -1,7 +1,7 @@
+ #ifndef __PROTOBUF_KDB_H__
+ #define __PROTOBUF_KDB_H__
+
+-#include <k.h>
++#include "k.h"
+
+ #ifdef _WIN32
+ #define EXP __declspec(dllexport)
+diff --git a/src/RepeatedValues.h b/src/RepeatedValues.h
+index a75239a..119b850 100644
+--- a/src/RepeatedValues.h
++++ b/src/RepeatedValues.h
+@@ -5,7 +5,7 @@
+
+ // Due to its excessive and non-specific use of #define, 'k.h' must be included
+ // after all the protobuf headers to avoid conflicts.
+-#include <k.h>
++#include "k.h"
+
+
+ namespace kx {
+diff --git a/src/ScalarValues.h b/src/ScalarValues.h
+index 6ad6be0..5213a80 100644
+--- a/src/ScalarValues.h
++++ b/src/ScalarValues.h
+@@ -5,7 +5,7 @@
+
+ // Due to its excessive and non-specific use of #define, 'k.h' must be included
+ // after all the protobuf headers to avoid conflicts.
+-#include <k.h>
++#include "k.h"
+
+
+ namespace kx {
+-- 
+2.31.1

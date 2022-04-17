@@ -1,0 +1,24 @@
+From 27755b440af53f2b77d63b765854f7b3865c146c Mon Sep 17 00:00:00 2001
+From: Sam Bacha <sam@manifoldfinance.com>
+Date: Sun, 6 Jun 2021 12:40:09 +0200
+Subject: [PATCH 1/2] src: stop downloading k.h from master branch
+
+---
+ src/CMakeLists.txt | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 014bcc5..0e1bca7 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -61,8 +61,6 @@ PROTOBUF_GENERATE_CPP(PROTO_KDB_SRCS PROTO_KDB_HDRS kdb_type_specifier.proto)
+ set(PROTO_SRCS "${PROTO_SRCS};${PROTO_KDB_SRCS}")
+ set(PROTO_HDRS "${PROTO_HDRS};${PROTO_KDB_HDRS}")
+
+-file(DOWNLOAD "https://github.com/KxSystems/kdb/raw/master/c/c/k.h" "${CMAKE_BINARY_DIR}/k.h" )
+-
+ if (MSVC)
+     file(DOWNLOAD "https://github.com/KxSystems/kdb/raw/master/w64/q.lib" "${CMAKE_BINARY_DIR}/q.lib" )
+     set(LINK_LIBS "${CMAKE_BINARY_DIR}/q.lib")
+-- 
+2.31.1
