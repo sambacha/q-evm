@@ -8,6 +8,12 @@
 
 kdb+ adapted for usage on Ethereum/EVM Chains
 
+This code is no longer in usage at Manifold Finance, which is why we have open sourced it.
+
+You will need a license for kdb+ to use this (32bit works).
+
+Instructions: mortals require instructions.
+
 ## Utils
 
 [Jupyter Notebook for Sushiswap/Uniswap Liquidity and Market Depth](https://gist.github.com/sambacha/a21955e8a8feec7579a607f153476547#file-sushiswap_liquiditypairs-ipynb)
@@ -127,8 +133,6 @@ console.log(
   )
 
 ```
-
-5. A miner for target block not running Flashbots
 
 
 
