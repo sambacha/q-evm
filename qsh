@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# append to ~/.bashrc
+# alias to invoke kdb+ q-lang
+q() {
+    ~/q/l64/q "$@"
+}
+export -f q
