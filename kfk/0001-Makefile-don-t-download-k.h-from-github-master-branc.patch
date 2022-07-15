@@ -1,0 +1,33 @@
+From 1b9d3667a90358c5d008321818c3e219cc7e30a7 Mon Sep 17 00:00:00 2001
+From: Sam Bacha <sam@manifoldfinance.com>
+Date: Sun, 6 Jun 2021 08:25:06 +0200
+Subject: [PATCH] Makefile: don't download k.h from github master branch during
+ build
+
+We provide this after cloning the repo
+---
+ Makefile | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 5af64c9..f6a652f 100644
+--- a/Makefile
++++ b/Makefile
+@@ -28,12 +28,10 @@ endif
+ QARCH = $(OSFLAG)$(MS)
+ Q     = $(QHOME)/$(QARCH) 
+ 
+-all: k.h
++all:
+ 	$(CC) kfk.c -m$(MS) $(OPTS) $(LDOPTS_DYNAMIC) $(LD_COMMON) -I$(KFK_INCLUDE) $(LNK) -o $(TGT) $(OSXOPTS)
+-static: k.h
++static:
+ 	$(CC) kfk.c -m$(MS) $(OPTS) $(LDOPTS_STATIC)  $(LD_COMMON) -I$(KFK_INCLUDE) $(LNK) -o $(TGT) $(OSXOPTS)
+-k.h:
+-	curl -s -O -L https://github.com/KxSystems/kdb/raw/master/c/c/k.h 
+ install:
+ 	install $(TGT) $(Q)
+ clean:
+-- 
+2.31.1
+

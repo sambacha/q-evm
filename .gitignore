@@ -1,0 +1,18 @@
+# -*- mode: gitignore; -*-
+/out
+.DS_Store
+.secret
+.idea/*
+
+logs
+*.log
+.\#*
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*.ssh
+*.key
