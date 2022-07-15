@@ -1,0 +1,23 @@
+From fff009102056d071c98f839ed8954d0386bb83eb Mon Sep 17 00:00:00 2001
+From: Sam Bacha <sam@manifoldfinance.com>
+Date: Thu, 20 Jan 2022 12:08:01 +0100
+Subject: [PATCH] log4q: use logfmt format
+
+---
+ log4q.q | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/log4q.q b/log4q.q
+index 87f601a..67be65c 100644
+--- a/log4q.q
++++ b/log4q.q
+@@ -1,5 +1,5 @@
+ \d .log4q
+-fm:"%c\t[%p]:H=%h:PID[%i]:%d:%t:%f: %m\r\n";
++fm:"level=%c file=%f host=%h pid=%i %m\n";
+ sev:snk:`SILENT`DEBUG`INFO`WARN`ERROR`FATAL!();a:{$[1<count x;[h[x 0]::x 1;snk[y],::x 0];[h[x]::{x@y};snk[y],::x;]];};r:{snk::@[snk;y;except;x];};
+ h:m:()!();m["c"]:{[x;y]string x};m["f"]:{[x;y]string .z.f};m["p"]:{[x;y]string .z.p};m["P"]:{[x;y]string .z.P};m["m"]:{[x;y]y};m["h"]:{[x;y]string .z.h};m["i"]:{[x;y]string .z.i};m["d"]:{[x;y]string .z.d};m["D"]:{[x;y]string .z.D};m["t"]:{[x;y]string .z.t};m["T"]:{[x;y]string .z.T};
+ l:{ssr/[fm;"%",/:lfm;m[lfm:raze -1_/:2_/:nl where fm like/: nl:"*%",/:(.Q.a,.Q.A),\:"*"].\:(x;y)]};
+-- 
+2.34.1
+
