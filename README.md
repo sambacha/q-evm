@@ -10,9 +10,27 @@ kdb+ adapted for usage on Ethereum/EVM Chains
 
 This code is no longer in usage at Manifold Finance, which is why we have open sourced it.
 
-You will need a license for kdb+ to use this (32bit works).
 
-Instructions: mortals require instructions.
+## Setup
+
+>**Warning**      
+>  mortals require instructions, you have been warned.
+
+
+1. [You will need a license for kdb+ to use this, here is the install instructions via code.kx.com](https://code.kx.com/q/learn/install/)
+
+2. [Get the 64bit License via the On-Demand Personal exemption](https://kx.com/64bit-on-demand-personal-edition/)
+
+
+## Required Libraries
+
+These libraries are *required*
+
+[https://github.com/manifoldfinance/qBigInt](https://github.com/manifoldfinance/qBigInt)
+
+[https://github.com/manifoldfinance/qQuarticRoots](https://github.com/manifoldfinance/qQuarticRoots)
+
+[https://github.com/manifoldfinance/qAbiEncode](https://github.com/manifoldfinance/qAbiEncode)
 
 ## Utils
 
@@ -133,8 +151,6 @@ console.log(
   )
 
 ```
-
-
 
 ## License
 
