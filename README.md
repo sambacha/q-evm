@@ -32,6 +32,23 @@ These libraries are *required*
 
 [https://github.com/manifoldfinance/qAbiEncode](https://github.com/manifoldfinance/qAbiEncode)
 
+
+## Example: Aave
+
+[see /aave dir](/aave)
+
+![](https://d.pr/i/K4XegR.jpeg)
+
+Will start 4 processes.
+
+q realtime db for user balances
+subscribe to all lender events to update db balances
+query snapshot of every user balance (will take a long time to complete but liquidations can still occur in the background)
+scan for unstable health and try to liquidate (prompt will appear for unlocking your accounts)
+logs folder will hold log info
+
+To view live user balances and health: http://localhost:5010
+
 ## Utils
 
 [Jupyter Notebook for Sushiswap/Uniswap Liquidity and Market Depth](https://gist.github.com/sambacha/a21955e8a8feec7579a607f153476547#file-sushiswap_liquiditypairs-ipynb)
