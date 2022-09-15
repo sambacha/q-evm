@@ -41,13 +41,13 @@ These libraries are *required*
 
 Will start 4 processes.
 
-q realtime db for user balances
-subscribe to all lender events to update db balances
-query snapshot of every user balance (will take a long time to complete but liquidations can still occur in the background)
-scan for unstable health and try to liquidate (prompt will appear for unlocking your accounts)
-logs folder will hold log info
+q realtime db for user balances.    
+subscribe to all lender events to update db balances.      
+query snapshot of every user balance (will take a long time to complete but liquidations can still occur in the background).     
+scan for unstable health and try to liquidate (prompt will appear for unlocking your accounts).   
+logs folder will hold log info.   
 
-To view live user balances and health: http://localhost:5010
+To view live user balances and health: `http://localhost:5010`.    
 
 ## Utils
 
