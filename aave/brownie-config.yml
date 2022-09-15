@@ -1,0 +1,19 @@
+# automatically fetch contract sources from Etherscan
+autofetch_sources: True
+
+# require OpenZepplin Contracts v3.0.0
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.3.2
+
+# path remapping to support OpenZepplin imports with NPM-style path
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.3.2'
+
+networks:
+  default: poly_alchemy
+  mainnet:
+    aave_lending_pool_v2: "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9"
+    weth: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    sushi_router: "0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F"
